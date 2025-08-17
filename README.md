@@ -1,6 +1,4 @@
-# GnomeAppTemplate
-
-#GTK3
+# GTK3
 
 Debian dependencies:
 
@@ -8,10 +6,10 @@ Debian dependencies:
 sudo apt install libgtk-3-dev
 ```
 
-#GTK4
+# GTK4
+
+Debian dependencies:
 
 ```
 sudo apt install libgtk-4-dev
-sudo apt install blueprint-compiler
-dotnet new install TenderOwl.GirCoreTemplate.CSharp
 ```

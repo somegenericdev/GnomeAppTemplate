@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GnomeApp", "GnomeApp\GnomeApp.csproj", "{C090A3D8-7FDC-4B6F-8C45-9FB6A4DD992D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gtk3App", "Gtk3App\Gtk3App.csproj", "{C090A3D8-7FDC-4B6F-8C45-9FB6A4DD992D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gtk4App.App", "Gtk4App.App\Gtk4App.App.csproj", "{F5CE4709-E8AD-45AF-87D1-573841D1BF9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gtk4App", "Gtk4App\Gtk4App.csproj", "{F5CE4709-E8AD-45AF-87D1-573841D1BF9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

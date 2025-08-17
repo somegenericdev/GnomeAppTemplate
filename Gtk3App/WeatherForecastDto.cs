@@ -1,4 +1,4 @@
-namespace GnomeApp;
+namespace Gtk3App;
 
 public class WeatherForecastDto
 {

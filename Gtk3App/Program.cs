@@ -1,7 +1,7 @@
 ﻿using System;
 using Gdk;
 using GLib;
-using GnomeApp;
+using Gtk3App;
 using Gtk;
 using Application = Gtk.Application;
 using DateTime = System.DateTime;
