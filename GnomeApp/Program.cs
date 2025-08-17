@@ -1,7 +1,10 @@
 ﻿using System;
 using Gdk;
+using GLib;
 using GnomeApp;
 using Gtk;
+using Application = Gtk.Application;
+using DateTime = System.DateTime;
 using Window = Gtk.Window;
 
 Application.Init();
@@ -10,8 +13,11 @@ var window = new Window("GNOME App with Tab Bar");
 window.SetDefaultSize(600, 400);
 window.DeleteEvent += (o, e) => Application.Quit();
 
+
 //tab bar
 var notebook = new Notebook();
+
+
 //tab 1
 var tab1Label = new Label("Hello World. Welcome to your new app.");
 notebook.AppendPage(tab1Label, new Label("Home"));
@@ -27,7 +33,6 @@ button.Clicked += (sender, e) =>
 {
     counter = counter + 1;
     counterLabel.Text = $"Counter: {counter}";
-    Console.WriteLine("Button clicked in Tab 3!");
 };
 
 counterBox.PackStart(counterLabel, false, false, 10);
@@ -72,6 +77,11 @@ StyleContext.AddProviderForScreen(
     StyleProviderPriority.Application
 );
 
+
+foreach (var c in notebook.Children)
+{
+    notebook.ChildSetProperty(c,"tab-expand", new Value(true));
+}
 
 window.ShowAll();
 Application.Run();
