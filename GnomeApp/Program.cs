@@ -97,25 +97,19 @@ TreeView BuildGrid(List<WeatherForecastDto> weatherForecasts)
     }
 
     treeView.Model = store;
+    
+    foreach(var columnName in new[]{"Date", "Temperature", "Summary"})
+    {
+        var nameColumn = new TreeViewColumn { Title = columnName };
+        var nameCell = new CellRendererText();
+        nameColumn.Resizable = true;
+        nameColumn.Sizing = TreeViewColumnSizing.Autosize;
+        nameColumn.Reorderable = true;
+        nameColumn.PackStart(nameCell, true);
+        nameColumn.AddAttribute(nameCell, "text", 0);
+        treeView.AppendColumn(nameColumn);
 
-    var nameColumn = new TreeViewColumn { Title = "Date" };
-    var nameCell = new CellRendererText();
-    nameColumn.PackStart(nameCell, true);
-    nameColumn.AddAttribute(nameCell, "text", 0);
-    treeView.AppendColumn(nameColumn);
-
-    var ageColumn = new TreeViewColumn { Title = "Temperature" };
-    var ageCell = new CellRendererText();
-    ageColumn.PackStart(ageCell, true);
-    ageColumn.AddAttribute(ageCell, "text", 1);
-    treeView.AppendColumn(ageColumn);
-
-
-    var summaryColumn = new TreeViewColumn { Title = "Summary" };
-    var summaryCell = new CellRendererText();
-    summaryColumn.PackStart(summaryCell, true);
-    summaryColumn.AddAttribute(summaryCell, "text", 1);
-    treeView.AppendColumn(summaryColumn);
+    }
 
     return treeView;
 }
